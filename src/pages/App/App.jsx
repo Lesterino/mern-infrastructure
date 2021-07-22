@@ -4,7 +4,7 @@ import "./App.css";
 import Puppies from "../Puppies/Puppies";
 import NewPuppyPage from "../NewPuppyPage/NewPuppyPage";
 import AuthPage from "../AuthPage/AuthPage";
-import NavBar from "../../components/NavBar.jsx"
+import NavBar from "../../components//NavBar/NavBar.jsx"
 
 function App() {
   const [user, setUser] = useState({});
