@@ -1,25 +1,26 @@
-import logo from "./logo.svg";
 import { useState } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Puppies from "../Puppies/Puppies";
 import NewPuppyPage from "../NewPuppyPage/NewPuppyPage";
 import AuthPage from "../AuthPage/AuthPage";
+import NavBar from "../../components/NavBar.jsx"
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({});
   return (
     <main className="App">
+      <NavBar />
       {user ? (
         <>
           <Switch>
             <Route path="/puppies/new">
-              <Puppies />
-            </Route>
-            <Route path="/puppies">
               <NewPuppyPage />
             </Route>
-            <Redirect to="/orders" />
+            <Route path="/puppies">
+              <Puppies />
+            </Route>
+            <Redirect to="/puppies" />
           </Switch>
         </>
       ) : (
