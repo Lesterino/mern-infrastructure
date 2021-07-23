@@ -7,7 +7,7 @@ import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components//NavBar/NavBar.jsx"
 
 function App() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
   return (
     <main className="App">
       <NavBar />
