@@ -26,7 +26,7 @@ app.listen(port, function() {
   console.log(`Express app running on port ${port}`)
 });
 
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'build')));
 
 // Put API routes here, before the "catch all" route
 
