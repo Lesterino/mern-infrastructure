@@ -49,3 +49,7 @@ export const login = async(credentials) => {
 		throw new Error('Invalid Login');
 	}
 }
+
+export function checkToken() {
+	return usersAPI.checkToken().then((dateStr) => new Date(dateStr));
+}
